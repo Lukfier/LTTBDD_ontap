@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.lophoc: viewPager.setCurrentItem(1);
                     break;
                 }
-                return false;
+                return true;
             }
         });
     }

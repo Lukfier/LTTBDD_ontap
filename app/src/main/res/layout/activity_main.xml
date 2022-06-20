@@ -10,7 +10,10 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bottomNavigation" />
+        android:layout_above="@+id/bottomNavigation"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple_200"
+         />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_alignParentBottom="true"
         android:id="@+id/bottomNavigation"
