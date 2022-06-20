@@ -2,7 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/sinhvien"
         android:title="Sinh viên"
+        android:icon="@drawable/ic_student"
         />
     <item android:id="@+id/lophoc"
-        android:title="Lớp học"/>
+        android:title="Lớp học"
+        android:icon="@drawable/ic_class"/>
 </menu>

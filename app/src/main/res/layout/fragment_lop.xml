@@ -20,18 +20,20 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tên lớp"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:hint="Tên lớp"
+            android:minHeight="48dp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mô tả"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:hint="Mô tả"
+            android:minHeight="48dp" />
 
 
         <Button
