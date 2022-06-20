@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,7 +48,7 @@ public class LopFragment extends Fragment {
         thongKe = view.findViewById(R.id.spThongKeLop);
         listView = view.findViewById(R.id.lvLop);
 
-        String[] dsThongKe = {"Theo thời gian thêm", "Theo sĩ số"};
+        String[] dsThongKe = {"Theo thời gian thêm", "Theo sĩ số giảm"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, dsThongKe);
         thongKe.setAdapter(adapter);
 
@@ -76,6 +77,38 @@ public class LopFragment extends Fragment {
                 listView.setAdapter(adapterLop);
             }
         });
+
+        thongKe.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 0) {
+                    listLop = db.getAllLop();
+
+                    adapterLop = new LopAdapter(getActivity(), listLop);
+                    listView.setAdapter(adapterLop);
+                }else if (position == 1) {
+                    listLop = db.getAllLopSiSoGiam();
+
+                    adapterLop = new LopAdapter(getActivity(), listLop);
+                    listView.setAdapter(adapterLop);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        DatabaseHelper db = new DatabaseHelper(getActivity());
+        listLop = db.getAllLop();
+
+        adapterLop = new LopAdapter(getActivity(), listLop);
+        listView.setAdapter(adapterLop);
     }
 }

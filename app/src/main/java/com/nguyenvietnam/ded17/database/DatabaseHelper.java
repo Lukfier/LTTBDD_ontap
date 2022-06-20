@@ -12,6 +12,8 @@ import com.nguyenvietnam.ded17.model.SinhVien;
 import com.nguyenvietnam.ded17.model.SinhVienLop;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
@@ -147,5 +149,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String sql = "INSERT INTO sinhvienlop (maSV, maLop, kyHoc, soTinChi) VALUES (?,?,?,?)";
         String[] selectionArgs = {svl.getSv().getMaSV() +"", svl.getLop().getMaLop()+"", svl.getKyhoc(), svl.getSoTinChi() + ""};
         db.execSQL(sql, selectionArgs);
+    }
+
+    public List<SinhVien> getAllSinhVienNam2() {
+        List<SinhVien> list = new ArrayList<>();
+        SQLiteDatabase st = getReadableDatabase();
+        String sql = "SELECT * FROM sinhvien WHERE tenSV LIKE '%Nam%' AND namHoc = 'Năm hai'";
+        Cursor rs = st.rawQuery(sql, null);
+        while(rs!=null && rs.moveToNext()) {
+            int maSV = rs.getInt(0);
+            String ten = rs.getString(1);
+            String namSinh = rs.getString(2);
+            String queQuan = rs.getString(3);
+            String namHoc = rs.getString(4);
+            list.add(new SinhVien(maSV, ten, namSinh, queQuan, namHoc));
+        }
+        return list;
+    }
+
+    public List<Lop> getAllLopSiSoGiam() {
+        List<Lop> list = new ArrayList<>();
+        SQLiteDatabase st = getReadableDatabase();
+        String sql = "SELECT * FROM lop";
+        Cursor rs = st.rawQuery(sql, null);
+        while(rs!=null && rs.moveToNext()) {
+            int maLop = rs.getInt(0);
+            String ten = rs.getString(1);
+            String moTa = rs.getString(2);
+            int siSo = getAllSinhVienLop(maLop).size();
+            list.add(new Lop(maLop, ten, moTa, siSo));
+        }
+        Collections.sort(list, (o1, o2) -> (o2.getSiSo()+"").compareTo(o1.getSiSo()+""));
+        return list;
     }
 }

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -82,6 +83,26 @@ public class SinhVienFragment extends Fragment {
                 lsSinhVien = db.getAllSinhVien();
                 adapterSV = new SinhVienAdapter(getActivity(), lsSinhVien);
                 listView.setAdapter(adapterSV);
+            }
+        });
+
+        thongKe.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 0) {
+                    lsSinhVien = db.getAllSinhVien();
+                    adapterSV = new SinhVienAdapter(getActivity(), lsSinhVien);
+                    listView.setAdapter(adapterSV);
+                }else if (position == 1) {
+                    lsSinhVien = db.getAllSinhVienNam2();
+                    adapterSV = new SinhVienAdapter(getActivity(), lsSinhVien);
+                    listView.setAdapter(adapterSV);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
         return view;
