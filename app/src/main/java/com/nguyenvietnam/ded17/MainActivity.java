@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 switch (position) {
-                    case 0: bottomNavigationView.getMenu().findItem(R.id.sinhvien).setCheckable(true);
+                    case 0: bottomNavigationView.getMenu().findItem(R.id.sinhvien).setChecked(true);
                     break;
-                    case 1: bottomNavigationView.getMenu().findItem(R.id.lophoc).setCheckable(true);
+                    case 1: bottomNavigationView.getMenu().findItem(R.id.lophoc).setChecked(true);
                     break;
                 }
             }

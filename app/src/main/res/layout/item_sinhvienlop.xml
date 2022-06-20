@@ -1,50 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:orientation="horizontal"
-    android:weightSum="5"
+    android:weightSum="7"
     android:layout_marginTop="5dp">
+    <TextView
+        android:id="@+id/item_svl_maSV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Mã SV" />
 
     <TextView
-        android:id="@+id/item_malop"
+        android:id="@+id/item_svl_ten"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="Mã lớp" />
+        android:text="Tên" />
 
     <TextView
-        android:id="@+id/item_tenlop"
+        android:id="@+id/item_svl_namsinh"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="Tên lớp" />
+        android:text="Năm sinh" />
 
     <TextView
-        android:id="@+id/item_mota"
+        android:id="@+id/item_svl_quequan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="Mô tả" />
+        android:text="Quê quán" />
 
-    <Button
-        android:id="@+id/item_DS"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="DS"/>
     <TextView
-        android:id="@+id/item_siso"
+        android:id="@+id/item_svl_namhoc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="Sĩ số" />
+        android:text="Năm học" />
+
+    <TextView
+        android:id="@+id/item_svl_kyhoc"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kỳ học"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/item_svl_sotinchi"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Số tín chỉ"
+        android:gravity="center"
+        />
+
 
 </LinearLayout>

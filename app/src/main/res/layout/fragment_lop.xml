@@ -18,6 +18,7 @@
             android:gravity="center"/>
 
         <EditText
+            android:id="@+id/edtTenLop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -27,6 +28,7 @@
             android:minHeight="48dp" />
 
         <EditText
+            android:id="@+id/edtMoTa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -37,13 +39,18 @@
 
 
         <Button
+            android:id="@+id/btnThemLop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thêm"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"/>
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/purple_200"/>
         <Spinner
+            android:id="@+id/spThongKeLop"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:layout_marginTop="5dp"
@@ -56,7 +63,7 @@
             android:orientation="horizontal"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:weightSum="4"
+            android:weightSum="5"
             android:layout_marginTop="10dp">
             <TextView
                 android:layout_weight="1"
@@ -85,9 +92,17 @@
                 android:text="Hành động"
                 android:gravity="center"
                 />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sĩ số"
+                android:gravity="center"
+                />
         </LinearLayout>
 
         <ListView
+            android:id="@+id/lvLop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"

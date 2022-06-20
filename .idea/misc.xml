@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/TaiLieu/HocDaiHoc/Ky8/PhatTrienUngDungDiDong/CuoiKy/De17/app/src/main/res/layout/activity_main.xml" value="0.23854166666666668" />
+        <entry key="..\:/TaiLieu/HocDaiHoc/Ky8/PhatTrienUngDungDiDong/CuoiKy/De17/app/src/main/res/layout/activity_sinh_vien_lop.xml" value="0.20572916666666666" />
         <entry key="..\:/TaiLieu/HocDaiHoc/Ky8/PhatTrienUngDungDiDong/CuoiKy/De17/app/src/main/res/layout/fragment_lop.xml" value="0.23854166666666668" />
         <entry key="..\:/TaiLieu/HocDaiHoc/Ky8/PhatTrienUngDungDiDong/CuoiKy/De17/app/src/main/res/layout/fragment_sinh_vien.xml" value="0.23854166666666668" />
+        <entry key="..\:/TaiLieu/HocDaiHoc/Ky8/PhatTrienUngDungDiDong/CuoiKy/De17/app/src/main/res/layout/item_lop.xml" value="0.25416666666666665" />
+        <entry key="..\:/TaiLieu/HocDaiHoc/Ky8/PhatTrienUngDungDiDong/CuoiKy/De17/app/src/main/res/layout/item_sinhvien.xml" value="0.20572916666666666" />
+        <entry key="..\:/TaiLieu/HocDaiHoc/Ky8/PhatTrienUngDungDiDong/CuoiKy/De17/app/src/main/res/layout/item_sinhvienlop.xml" value="0.20572916666666666" />
         <entry key="..\:/TaiLieu/HocDaiHoc/Ky8/PhatTrienUngDungDiDong/CuoiKy/De17/app/src/main/res/menu/menubottomnavigation.xml" value="0.23854166666666668" />
         <entry key="..\:/TaiLieu/HocDaiHoc/Ky8/PhatTrienUngDungDiDong/CuoiKy/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/TaiLieu/HocDaiHoc/Ky8/PhatTrienUngDungDiDong/CuoiKy/app/src/main/res/layout/fragment_lop.xml" value="0.25729166666666664" />
